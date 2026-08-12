@@ -1,0 +1,40 @@
+apiVersion: v2
+name: eden
+description: A Helm chart for Eden - the linuxserver.io Nintendo Switch emulator KasmVNC webtop image
+type: application
+version: 1.0.0
+appVersion: "latest"
+keywords:
+  - eden
+  - emulator
+  - switch
+  - nintendo
+  - retrogaming
+  - kasmvnc
+  - linuxserver
+home: https://docs.linuxserver.io/images/docker-eden/
+sources:
+  - https://github.com/linuxserver/docker-eden
+  - https://github.com/HenriqZimer/eden-helm-chart
+maintainers:
+  - name: HenriqZimer
+    email: henrique.zimermann@outlook.com
+    url: https://henriqzimer.com.br
+annotations:
+  artifacthub.io/license: MIT
+  artifacthub.io/links: |
+    - name: Helm Repository
+      url: https://henriqzimer.github.io/eden-helm-chart/
+    - name: Chart Source
+      url: https://github.com/HenriqZimer/eden-helm-chart
+    - name: Maintainer Website
+      url: https://henriqzimer.com.br
+    - name: GitHub Profile
+      url: https://github.com/HenriqZimer
+    - name: linuxserver.io Eden Image
+      url: https://github.com/linuxserver/docker-eden
+    - name: Documentation
+      url: https://github.com/HenriqZimer/eden-helm-chart/blob/main/chart/README.md
+  artifacthub.io/changes: |
+    - kind: added
+      description: Initial release of the Eden Helm chart
