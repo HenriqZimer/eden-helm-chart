@@ -1,6 +1,6 @@
 # Eden Helm Chart
 
-[![Version: 1.1.0](https://img.shields.io/badge/Version-1.1.0-informational?style=flat-square)](https://github.com/HenriqZimer/eden-helm-chart)
+[![Version: 1.1.1](https://img.shields.io/badge/Version-1.1.1-informational?style=flat-square)](https://github.com/HenriqZimer/eden-helm-chart)
 [![AppVersion: latest](https://img.shields.io/badge/AppVersion-latest-informational?style=flat-square)](https://docs.linuxserver.io/images/docker-eden/)
 
 A Helm chart for [Eden](https://docs.linuxserver.io/images/docker-eden/) - the linuxserver.io
@@ -46,7 +46,7 @@ git clone https://github.com/HenriqZimer/eden-helm-chart.git
 cd eden-helm-chart
 
 helm package chart/
-helm install eden ./eden-1.1.0.tgz
+helm install eden ./eden-1.1.1.tgz
 ```
 
 ## Configuration
