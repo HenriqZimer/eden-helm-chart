@@ -29,14 +29,14 @@ your network:
 ### Add Helm Repository
 
 ```bash
-helm repo add eden https://henriqzimer.github.io/eden-helm-chart/
+helm repo add eden-helm-chart https://henriqzimer.github.io/eden-helm-chart/
 helm repo update
 ```
 
 ### Install Chart
 
 ```bash
-helm install eden eden/eden
+helm install my-eden eden-helm-chart/eden --version 1.1.5
 ```
 
 For detailed installation instructions and configuration options, see the [chart README](chart/README.md).

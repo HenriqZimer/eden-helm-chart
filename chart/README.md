@@ -4,7 +4,7 @@
   <img src="https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/eden-logo.png" alt="Eden logo" width="140" />
 </p>
 
-[![Version: 1.1.4](https://img.shields.io/badge/Version-1.1.4-informational?style=flat-square)](https://github.com/HenriqZimer/eden-helm-chart)
+[![Version: 1.1.5](https://img.shields.io/badge/Version-1.1.5-informational?style=flat-square)](https://github.com/HenriqZimer/eden-helm-chart)
 [![AppVersion: latest](https://img.shields.io/badge/AppVersion-latest-informational?style=flat-square)](https://docs.linuxserver.io/images/docker-eden/)
 
 A Helm chart for [Eden](https://docs.linuxserver.io/images/docker-eden/) - the linuxserver.io
@@ -14,11 +14,11 @@ Nintendo Switch emulator, served as a full desktop over the browser via KasmVNC.
 
 ```bash
 # Add the Helm repository
-helm repo add eden https://henriqzimer.github.io/eden-helm-chart
+helm repo add eden-helm-chart https://henriqzimer.github.io/eden-helm-chart/
 helm repo update
 
 # Install Eden
-helm install eden eden/eden
+helm install my-eden eden-helm-chart/eden --version 1.1.5
 ```
 
 ## Prerequisites
@@ -37,10 +37,10 @@ helm install eden eden/eden
 ### From Helm Repository
 
 ```bash
-helm repo add eden https://henriqzimer.github.io/eden-helm-chart
+helm repo add eden-helm-chart https://henriqzimer.github.io/eden-helm-chart/
 helm repo update
 
-helm install eden eden/eden
+helm install my-eden eden-helm-chart/eden --version 1.1.5
 ```
 
 ### From Source
@@ -50,7 +50,7 @@ git clone https://github.com/HenriqZimer/eden-helm-chart.git
 cd eden-helm-chart
 
 helm package chart/
-helm install eden ./eden-1.1.4.tgz
+helm install my-eden ./eden-1.1.5.tgz
 ```
 
 ## Configuration
