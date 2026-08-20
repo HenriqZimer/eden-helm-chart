@@ -1,0 +1,95 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+annotations:
+  artifacthub.io/changes: |
+    - kind: changed
+      description: README now shows the emulator's logo at the top (linuxserver.io's own image, same one used for the chart icon)
+  artifacthub.io/changesHistory: |
+    - version: 1.1.3
+      changes:
+        - kind: added
+          description: Chart releases are now signed (helm package --sign) - see artifacthub.io/signKey for the public key location and fingerprint, powers the "Signed" badge on ArtifactHub
+    - version: 1.1.2
+      changes:
+        - kind: added
+          description: values.schema.json - validates values.yaml against a JSON Schema, and is what powers the "Values schema" feature/badge on ArtifactHub (previously absent)
+    - version: 1.1.1
+      changes:
+        - kind: added
+          description: icon, previously missing entirely - pointed at linuxserver.io's own logo image for this app, which is why no image was ever showing on ArtifactHub
+    - version: 1.1.0
+      changes:
+        - kind: added
+          description: gpu.vendor "nvidia" mode (alongside the existing "intel-amd" VA-API mode), requesting nvidia.com/gpu via the NVIDIA Kubernetes device plugin and setting NVIDIA_VISIBLE_DEVICES/NVIDIA_DRIVER_CAPABILITIES. Documented the nvidia-drm.modeset=1 kernel parameter (and, on headless nodes, a dummy HDMI/DP plug) needed on the node for the compositor to render anything instead of a solid black desktop
+        - kind: added
+          description: seccompUnconfined to work around a JIT recompiler crashing with SIGBUS under the default seccomp profile on some kernel/libseccomp combinations
+        - kind: changed
+          description: Bumped the default shmSize from 1Gi to 2Gi, matching the fix confirmed on this chart's sibling pcsx2-helm-chart for a JIT recompiler crashing with SIGBUS under Docker/Kubernetes' small default /dev/shm
+    - version: 1.0.0
+      changes:
+        - kind: added
+          description: Initial release of the Eden Helm chart
+  artifacthub.io/license: MIT
+  artifacthub.io/links: |
+    - name: Helm Repository
+      url: https://henriqzimer.github.io/eden-helm-chart/
+    - name: Chart Source
+      url: https://github.com/HenriqZimer/eden-helm-chart
+    - name: Maintainer Website
+      url: https://henriqzimer.com.br
+    - name: GitHub Profile
+      url: https://github.com/HenriqZimer
+    - name: linuxserver.io Eden Image
+      url: https://github.com/linuxserver/docker-eden
+    - name: Documentation
+      url: https://github.com/HenriqZimer/eden-helm-chart/blob/main/chart/README.md
+  artifacthub.io/signKey: |
+    fingerprint: C2E2E16693F2715BA0B23913BF94E5067859562F
+    url: https://henriqzimer.github.io/eden-helm-chart/HenriqZimer-helm-charts-public.asc
+apiVersion: v2
+appVersion: latest
+description: A Helm chart for Eden - the linuxserver.io Nintendo Switch emulator KasmVNC
+  webtop image
+home: https://docs.linuxserver.io/images/docker-eden/
+icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/eden-logo.png
+keywords:
+- - eden
+- - emulator
+- - switch
+- - nintendo
+- - retrogaming
+- - kasmvnc
+- - linuxserver
+maintainers:
+- - email: henrique.zimermann@outlook.com
+  name: HenriqZimer
+  url: https://henriqzimer.com.br
+name: eden
+sources:
+- - https://github.com/linuxserver/docker-eden
+- - https://github.com/HenriqZimer/eden-helm-chart
+type: application
+version: 1.1.4
+
+...
+files:
+  eden-1.1.4.tgz: sha256:11bfa568ca5bf359f990b71096d907d6cc1fe91337bc1f86e87d98862ceb2ab7
+
+-----BEGIN PGP SIGNATURE-----
+
+wsG5BAEBCgBtBYJqhn8ZCRC/lOUGeFlWL0UUAAAAAAAcACBzYWx0QG5vdGF0aW9u
+cy5vcGVucGdwanMub3Jn1eLvP69d+YMbuibqiOHRg9prfw+Jy41Cc3xTEcv5fHgW
+IQTC4uFmk/JxW6CyORO/lOUGeFlWLwAAkLUP/AsuYGI9yNkW6j9+2JeW9W3YD38D
+zugmkfCTNOCykOCcWyWB8vTpnT5iL1iY+IAqvrQVpMLwsn0KtgXAKiZHsjG+14wy
+RxWo+I1cGqD/vQVlORtR794EsntmXPyiNPfgmsjRIUrjpG73D7dzez2cz5g11BSK
+++gApE3wdxe+n8f5Ag1y1qeOJej5U2SIgpzvONFJHNwd8cprgsGGTkcQJgAtUQKE
+basctGNXga3Bn/DQQpu0CEqF+DyD5S4OBFHm8quhJQJthqBMUVOcNw6SYKVJsPx0
+AivwKCJNhggJTp8wCQ6ReHW0kLn3/73dlAhcLIJH27139/mTZhDQD9g3P4WhPQWr
+XztfLnN2e2gvuNMTMa+XV9MSoh+R8mZLDRVcTF+296/a4LQ4WLUGpVKmqhyoq+pH
+drVUSnw5JZsi/4ajqjlFAgQ9TUkoXLQ5d+n8shYFh4x4y8hJ2TV5fXFnqOaaizG/
+IrsCdMTxeUwixO2F6x+aIbsdHNb87MIBh6zQ78WRwaojn9ESxx0CME6cwrE4x4U3
+dfawZ1BsSJ1bx60RzGMNSXwP1Z0rPPGXw6N1c1AJ+ZZxLatPhnK9ZRn8Rz9GNvWW
+Sb0xpmlhDnELQHk5BW1iwfM5MbMVcUf6ZU9Krkfoq5g6UL1pDh0hg6uy4asWH5ZV
+P4y0iBa1X5xmhJsB
+-----END PGP SIGNATURE-----
