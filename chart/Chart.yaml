@@ -2,7 +2,7 @@ apiVersion: v2
 name: eden
 description: A Helm chart for Eden - the linuxserver.io Nintendo Switch emulator KasmVNC webtop image
 type: application
-version: 1.4.3
+version: 1.4.4
 appVersion: "latest"
 icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/eden-logo.png
 keywords:
